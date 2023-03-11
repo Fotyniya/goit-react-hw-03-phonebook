@@ -59,7 +59,7 @@ changeFilter = (event) => {
 render(){
   const filtredContacts = 
     this.state.contacts
-    .filter(contact => contact.name.includes(this.state.filter));
+    .filter(contact => (contact.name).toUpperCase().includes((this.state.filter).toUpperCase()));
 
   return(
     <Layout> 
